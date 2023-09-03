@@ -6,8 +6,6 @@ Este projeto consiste em uma análise dos dados de banda larga disponíveis na B
 
 ## Estrutura do Projeto
 
-- `data/`: Pasta que contém os dados brutos da banda larga.
-- `notebooks/`: Pasta com os notebooks Jupyter utilizados na análise.
 - `results/`: Pasta que armazena as visualizações e resultados gerados.
 - `README.md`: Este arquivo com informações sobre o projeto.
 
