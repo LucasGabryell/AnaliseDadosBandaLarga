@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "banda-larga-397909",
+  "private_key_id": "9497e9e8068206636c1b15eb4fcbb2a1c78cb06a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjCUW5hZy5guSD\nXTN/F164JaqOPUJvAMPvnDeMKh1fDBwEdkgs3itVjZLVhuljf+eiiNai1Xk815JL\nq3yhx64Y04YLAnmeA+h0ifH6h/QyJemNGGBgjXJ68JhpNLx0LlIvuzP/v7h1i8n6\n12chu5gkqHYuBUImkqk05Wi8AtxFXA/EW5PlWZtpbwKihUq4zO/350YUiYXSZZIW\ndYsyHq0S4ZN6stz5r3jQMC8jsS+G7gt72VJaNgKEriD9oU3mi0+/011JrQbh72/X\ngievXpXHn2sLWoK/4kE4M+Bknejy9IgPiaoMQCVAfN3H59k5PR44QqLb40ibXrbr\nKKTNG80BAgMBAAECggEAOTSyMegHd3JNoyhLPu9gzWVuBG3LRy6yEXuzY+uNFcIm\nfIxSQ+gKtYCxAlpNvxtsl/PCuC0GVspfK0z3NL7fQBfMQ0WxjbfaUzXp4ZndndD+\ns4LXollPT4LnP5cA/xUXwmbB1p2baCdODkWRit0Lg+VWXkx7CxTP6V8LkljAmFcn\nHzdcS+5a5F0SHxSJccdOsXhk3k7oEK1QJE303CrKO7rKjHzNtGIaUKK6utxEE5xz\nU/1VZyy2+qo/Z9twIgMKU4FwqGiX6oOMwk0FXRyjX5cxSk7tD2I52f35qmDFFLiW\nKpItZASIqmC6ehlXs9uYeI6iohg0VgsaTNJdtF5NzwKBgQDXoLr4v14J7BWQttup\ncZAgbTZ7/TZ3IYI+f+/Gw+vHIUpCCWTnxdN4E6RkJENXWL47ikhjzFdqJ+8lkbtO\n7ATvmNq3tZ4iCXtC/7sOTok3Ua9YORvlvU2ORYomfH6sliKBZUoHbWuKEyCQCs9h\n3DJAP83Nq4ikli2PYp1GOZ3MbwKBgQDBj8UPRPf4CQfcHOUT72Mla9R7fK8PB5LM\n/7rt5HsthUgYaaWdJxTPdf4dgZHCS4mgFGGvrVWj2jxieCbPaNYGkrn35m/MubvW\nnH+/ljErLmvQV8W1g9xXH6m2m4fFf/EjKxf278mmTiLa/b01eQx9IFDFqXH/aSQr\ng53LKqaVjwKBgQDFzGV3RWSoSW7G31bFKq2BcW2nc3IA+jYVyxpTBOpGMp2B0khD\n7E6+OZZ1XmZ/u6JVz9Xz5kDR2mwf1H00OoGUoG0SVIIIyxXNMfWPfC+XFVF55nlW\n175LIjNGdrFk9BwXAqlUAuXBNSaLu77dEDbwhRbu8clY4YJNo7KN9tBv9QKBgG6U\ntU8I5uWEO0JMG69s5uadGPJHhDeA6yREwUVhb+HMsCiKSrxidGglj7zJpj0rLIAQ\nxNI5o6CNcEwNOpbp3MQ6lRYER0Ddp2tvUyhgJMz3o06OpnwRzhLUGwAhEMsLUfb2\niqVfzoM9Rnp31d2zvyfJC3wxVthE+A4IDmDgh/UPAoGAMntmmFNxtvZ/nI4ppZEy\nWzNCxfcKvfhAh2+G4TH2Jq4XcfwU8zxWGyVaeW/3UZKl2xfWWsMTYtN2LxnEEx7Y\ngncRkBtB+YUEMXLXU29dMnfddfSqQsUFEA1rhTdatUw0Z7uakc0n5/fFnuXrv8Ow\nav754H1wVig8t79rUeRzqYE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "projetobandalarga@banda-larga-397909.iam.gserviceaccount.com",
+  "client_id": "100782760807578258278",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/projetobandalarga%40banda-larga-397909.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
