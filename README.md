@@ -15,7 +15,7 @@ Este projeto consiste em uma análise dos dados de banda larga disponíveis na B
 
 Para executar a análise e reproduzir os resultados, siga estas etapas:
 
-1. Clone este repositório: https://github.com/seu-usuario/an%C3%A1lise-banda-larga.git
+1. Clone este repositório: https://github.com/LucasGabryell/AnaliseDadosBandaLarga
 
 2. Instale as dependências Python:
    streamlit
