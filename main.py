@@ -20,7 +20,6 @@ st.write(dados)
 # Barra de seleção para escolher o gráfico
 opcao_grafico = st.selectbox("Escolha o Gráfico", ["Gráfico de Acessos", "Gráfico de Tipo de Transmissão"])
 
-
 # Função para criar e mostrar o gráfico de Acessos
 def plot_acessos():
     acessos_por_mes = dados.groupby('mes')['acessos'].sum().reset_index()
