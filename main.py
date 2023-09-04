@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 import plotly.express as px
 
-
 # Título do aplicativo
 st.title("Análise de Dados de Banda Larga")
 
@@ -21,6 +20,7 @@ st.write(dados)
 # Barra de seleção para escolher o gráfico
 opcao_grafico = st.selectbox("Escolha o Gráfico", ["Gráfico de Acessos", "Gráfico de Tipo de Transmissão"])
 
+
 # Função para criar e mostrar o gráfico de Acessos
 def plot_acessos():
     acessos_por_mes = dados.groupby('mes')['acessos'].sum().reset_index()
@@ -29,12 +29,17 @@ def plot_acessos():
     st.write("### Gráfico de Acessos por Mês:")
     st.plotly_chart(fig)
 
+
 # Função para criar e mostrar o gráfico de Tipo de Transmissão
 def plot_transmissao():
-    fig = px.line(dados, x='mes', y='transmissao', markers=True, labels={'mes': 'Mês', 'transmissao': 'Tipo de Transmissão'})
-    fig.update_layout(title='Tipo de Transmissão de Rede ao Longo do Tempo', xaxis_title='Mês', yaxis_title='Tipo de Transmissão')
+    fig = px.bar(dados, x='mes', y='transmissao', color='transmissao',
+                 labels={'mes': 'Mês', 'transmissao': 'Tipo de Transmissão'},
+                 title='Tipo de Transmissão de Rede ao Longo do Tempo')
+    fig.update_xaxes(title='Mês')
+    fig.update_yaxes(title='Contagem')
     st.write("### Gráfico de Tipo de Transmissão de Rede ao Longo do Tempo:")
     st.plotly_chart(fig)
+
 
 # Mostrar o gráfico selecionado com base na escolha do usuário
 if opcao_grafico == "Gráfico de Acessos":
