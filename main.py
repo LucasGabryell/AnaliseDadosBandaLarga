@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from io import BytesIO
+import plotly.express as px
+
 
 # Título do aplicativo
 st.title("Análise de Dados de Banda Larga")
@@ -21,33 +23,18 @@ opcao_grafico = st.selectbox("Escolha o Gráfico", ["Gráfico de Acessos", "Grá
 
 # Função para criar e mostrar o gráfico de Acessos
 def plot_acessos():
-    acessos_por_mes = dados.groupby('mes')['acessos'].sum()
-    fig, ax = plt.subplots(figsize=(10, 6))
-    ax.patch.set_facecolor('none')
-    ax.bar(acessos_por_mes.index, acessos_por_mes.values, color='dodgerblue', edgecolor='white')
-    plt.xlabel('Mês', color='white')
-    plt.ylabel('Acessos', color='white')
-    plt.title('Acessos por Mês', color='white')
-    plt.xticks(rotation=45, color='white')
-    plt.yticks(color='white')
+    acessos_por_mes = dados.groupby('mes')['acessos'].sum().reset_index()
+    fig = px.bar(acessos_por_mes, x='mes', y='acessos', labels={'mes': 'Mês', 'acessos': 'Acessos'})
+    fig.update_layout(title='Acessos por Mês', xaxis_title='Mês', yaxis_title='Acessos')
     st.write("### Gráfico de Acessos por Mês:")
-    st.pyplot(fig, facecolor='none')
+    st.plotly_chart(fig)
 
 # Função para criar e mostrar o gráfico de Tipo de Transmissão
 def plot_transmissao():
-    plt.figure(figsize=(10, 6))
-    plt.plot(dados['mes'], dados['transmissao'], marker='o', color='green', linestyle='-', markersize=6)
-    plt.xlabel('Mês', color='white')
-    plt.ylabel('Tipo de Transmissão', color='white')
-    plt.title('Tipo de Transmissão de Rede ao Longo do Tempo', color='white')
-    plt.xticks(rotation=45, color='white')
-    plt.yticks(color='white')
-    plt.grid(True, linestyle='--', alpha=0.7)
-    tmp_file = BytesIO()
-    plt.savefig(tmp_file, format='png', bbox_inches='tight', transparent=True)
-    tmp_file.seek(0)
+    fig = px.line(dados, x='mes', y='transmissao', markers=True, labels={'mes': 'Mês', 'transmissao': 'Tipo de Transmissão'})
+    fig.update_layout(title='Tipo de Transmissão de Rede ao Longo do Tempo', xaxis_title='Mês', yaxis_title='Tipo de Transmissão')
     st.write("### Gráfico de Tipo de Transmissão de Rede ao Longo do Tempo:")
-    st.image(tmp_file, use_column_width=True)
+    st.plotly_chart(fig)
 
 # Mostrar o gráfico selecionado com base na escolha do usuário
 if opcao_grafico == "Gráfico de Acessos":
