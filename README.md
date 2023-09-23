@@ -46,7 +46,9 @@ Analisamos como essas características mudaram ao longo dos anos. [Inserir visua
 
 ### 4. Empresas com Maior Número de Contratos
 
-Listamos as empresas com o maior número de contratos, considerando o porte da empresa, se aplicável. [Inserir visualizações aqui.]
+Listamos as empresas com o maior número de contratos, considerando o porte da empresa, se aplicável.
+
+Dentre as empresas de grande porte, a OI é a líder, tendo o uma média do dobro de contratos do segundo colocado, a Claro. A Vivo vem logo atrás com valores que são bem abaixo da claro também e por fim SKY e TIM muito próximos, com valores que em média são parelhos.
 
 ### 5. Perfil do Tipo de Empresa por Ano
 
