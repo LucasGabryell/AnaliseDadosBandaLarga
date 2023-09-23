@@ -16,11 +16,11 @@ Para executar a análise e reproduzir os resultados, siga estas etapas:
 1. Clone este repositório: https://github.com/LucasGabryell/AnaliseDadosBandaLarga
 
 2. Instale as dependências Python:
-   streamlit
-   pandas
-   matplotlib.pyplot
-   io
-
+   - streamlit
+   - pandas
+   - matplotlib
+   - seaborn
+   - plotly
 
 3. Execute o processo.
 
@@ -28,11 +28,17 @@ Para executar a análise e reproduzir os resultados, siga estas etapas:
 
 ### 1. Distribuição de Acessos
 
-Nesta seção, apresentamos a distribuição de acessos de acordo com os atributos disponíveis. [Inserir visualizações aqui.]
+O mês com maior acesso foi: Maio. Esse mês se destacou com o maior número de acessos, representando um pico significativo na atividade.
+
+Por outro lado, o mês com menor acesso foi: Fevereiro. Este mês registrou o menor número de acessos, indicando uma diminuição na atividade em comparação com os demais meses.
+
+O total de acessos ao longo do período analisado foi de: 8984744.0.
+
+A média de acessos mensais gerais foi de: 748728.6666666666.
 
 ### 2. Características Tecnológicas e de Velocidade
 
-Identificamos as características predominantes em relação à tecnologia, transmissão e velocidade na banda larga fixa. [Inserir visualizações aqui.]
+Por quase uma década, o cabo metálico tem uma dominância. Isso porque, devido à infraestrutura existente, tecnologias DSL, disponibilidade em áreas remotas e velocidades suficientes para a maioria dos usuários. Perdendo um pouco de sua relevância em 2010, mas nada muito alarmante. Entretanto, o mesmo iria a decair em 2018 para a fibra que proporciona alta velocidade, confiabilidade e imunidade a interferências, sendo ideal para transmissões de dados de alta qualidade em longas distâncias. Sendo ela, a atual dominante.
 
 ### 3. Evolução ao Longo do Tempo
 
