@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
@@ -176,7 +175,6 @@ def plot_transmissao_velocidade_tecnologia(dados):
     st.plotly_chart(fig)
 
 
-
 def plot_empresas(dados):
     # Adicione uma barra de seleção para filtrar o ano
     anos = dados['ano'].unique()
@@ -195,11 +193,14 @@ def plot_empresas(dados):
     if portes_selecionados:
         dados_filtrados = dados_filtrados[dados_filtrados['porte_empresa'].isin(portes_selecionados)]
 
+    # Amostragem de Dados - Adicione uma amostra aleatória de 50% dos dados
+    dados_filtrados = dados_filtrados.sample(frac=0.2)
+
     # Crie uma lista de empresas com base nos filtros
-    empresas_disponiveis = dados_filtrados['empresa'].unique()
+    empresas_disponíveis = dados_filtrados['empresa'].unique()
 
     # Adicione um multiselect para escolher as empresas a serem incluídas no gráfico
-    empresas_selecionadas = st.multiselect('Selecione as Empresas', empresas_disponiveis)
+    empresas_selecionadas = st.multiselect('Selecione as Empresas', empresas_disponíveis)
 
     # Defina o título com base nos filtros aplicados
     titulo = f'Contagem de Empresas'
@@ -227,5 +228,14 @@ def plot_empresas(dados):
         plt.title(titulo)
         st.write("### Gráfico de Contagem de Empresas ao Longo do Tempo:")
         st.pyplot(plt)  # Passe a figura plt como argumento para st.pyplot()
+
+        # Identifique a empresa mais contratada e a menos contratada
+        empresa_mais_contratada = pivot_data.sum(axis=0).idxmax()
+        empresa_menos_contratada = pivot_data.sum(axis=0).idxmin()
+        contratacoes_empresa_mais = pivot_data.sum(axis=0).max()
+        contratacoes_empresa_menos = pivot_data.sum(axis=0).min()
+
+        st.write(f"**Empresa mais contratada:** {empresa_mais_contratada} ({contratacoes_empresa_mais} contratações)")
+        st.write(f"**Empresa menos contratada:** {empresa_menos_contratada} ({contratacoes_empresa_menos} contratações)")
     else:
         st.warning("Não há dados para exibir com os filtros selecionados.")
