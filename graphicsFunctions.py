@@ -101,7 +101,7 @@ def plot_transmissao(dados):
     fig.update_yaxes(title='Contagem')
 
     # Adicione informações sobre o tipo de transmissão mais e menos usados ao título
-    fig.update_layout(title_text=f"{titulo}\n(Mais Usado: {tipo_transmissao_mais_usado_total}, Menos Usado: {tipo_transmissao_menos_usada_total})")
+    #fig.update_layout(title_text=f"{titulo}\n(Mais Usado: {tipo_transmissao_mais_usado_total}, Menos Usado: {tipo_transmissao_menos_usada_total})")
 
     st.write("### Gráfico de Tipo de Transmissão de Rede ao Longo do Tempo:")
     st.plotly_chart(fig)
@@ -173,6 +173,14 @@ def plot_transmissao_velocidade_tecnologia(dados):
                      title=titulo)
     st.write("### Gráfico de Treemap de Tipo de Transmissão de Rede por Tecnologia:")
     st.plotly_chart(fig)
+
+    # Encontre a tecnologia mais usada e menos usada
+    tecnologia_mais_usada = dados_agrupados['tecnologia'].iloc[0]
+    tecnologia_menos_usada = dados_agrupados['tecnologia'].iloc[-1]
+
+    # Escreva o texto informativo
+    st.write(f"**Tecnologia mais usada (com base na velocidade):** {tecnologia_mais_usada}")
+    st.write(f"**Tecnologia menos usada (com base na velocidade):** {tecnologia_menos_usada}")
 
 
 def plot_empresas(dados):
